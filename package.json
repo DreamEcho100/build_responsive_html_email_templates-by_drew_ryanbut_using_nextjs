@@ -1,0 +1,34 @@
+{
+	"name": "build_responsive_html_email_templates-by_drew_ryanbut_using_nextjs",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build && next export && npm run clean_out_from_script_tags",
+		"start": "next start",
+		"lint": "next lint",
+		"clean_out_from_script_tags": "ts-node scripts/clean_out_from_scripts_tags.ts"
+	},
+	"dependencies": {
+		"@swc/core": "^1.2.207",
+		"@swc/helpers": "^0.4.3",
+		"cheerio": "^1.0.0-rc.12",
+		"next": "12.2.0",
+		"react": "18.2.0",
+		"react-dom": "18.2.0",
+		"react-html-comment": "^2.0.14",
+		"react-jsx-html-comments": "^1.0.1",
+		"react-tracked": "^1.7.9",
+		"regenerator-runtime": "^0.13.9",
+		"ts-node": "^10.8.1",
+		"tslib": "^2.4.0"
+	},
+	"devDependencies": {
+		"@types/node": "18.0.0",
+		"@types/react": "18.0.14",
+		"@types/react-dom": "18.0.5",
+		"eslint": "8.18.0",
+		"eslint-config-next": "12.2.0",
+		"typescript": "4.7.4"
+	}
+}

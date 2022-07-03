@@ -5,7 +5,7 @@ import { combineSimilarProps } from '../../utils';
 interface IImg extends ImgHTMLAttributes<HTMLImageElement> {
 	src: string;
 }
-const Img: FC<IImg> = ({ src, style, ...props }) => {
+const Img: FC<IImg> = ({ src, ...props }) => {
 	const [
 		{
 			components: { Img: imgComponentDefaults },

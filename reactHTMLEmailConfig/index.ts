@@ -37,6 +37,7 @@ const reactHTMLEmailConfig: IReactHTMLEmailConfig = {
 				fontSize: 'inherit',
 			},
 			target: '_blank',
+			rel: 'noopener noreferrer',
 			// border: 0,
 		},
 		// EmailWrapper: {
@@ -59,6 +60,13 @@ const reactHTMLEmailConfig: IReactHTMLEmailConfig = {
 			style: {
 				...defaultStyles,
 				borderSpacing: 0,
+				borderCollapse: 'collapse',
+				// font-family: Arial, Helvetica, sans-serif;
+				// line-height: 0px;
+				// font-size: 1px;
+				// padding: 0px !important;
+				// border-spacing: 0px;
+				// margin: 0px;
 			},
 			cellSpacing: 0,
 			cellPadding: 0,
@@ -73,6 +81,7 @@ const reactHTMLEmailConfig: IReactHTMLEmailConfig = {
 		Td: {
 			style: {
 				...defaultStyles,
+				borderCollapse: 'collapse',
 			},
 		},
 		// Trs: {

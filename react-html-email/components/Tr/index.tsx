@@ -38,7 +38,7 @@ const Tr: FC<ITrProps> = ({ children, td = {}, ...props }) => {
 			'type' in children &&
 			((typeof children.type === 'function' &&
 				'name' in children.type &&
-				['Td', 'HTMLComment'].includes(children.type.name)) ||
+				['Td', 'JSXStyle', 'HTMLComment'].includes(children.type.name)) ||
 				(typeof children.type === 'string' &&
 					['td', 'style'].includes(children.type))) ? (
 				children

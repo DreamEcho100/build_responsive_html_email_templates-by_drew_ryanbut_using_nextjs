@@ -7,3 +7,5 @@ export { default as Img } from './Img';
 export { default as A } from './A';
 export { default as P } from './P';
 export { default as HTMLComment } from './HTMLComment';
+export { default as HorizontalLineSeparator } from './HorizontalLineSeparator';
+export { default as VerticalBatSeparator } from './VerticalBatSeparator';

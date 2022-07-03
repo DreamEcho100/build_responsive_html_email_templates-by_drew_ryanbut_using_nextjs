@@ -4,7 +4,7 @@ import { combineSimilarProps } from '../../utils';
 
 interface IP extends HTMLAttributes<HTMLParagraphElement> {}
 
-const P: FC<IP> = ({ children, style, ...props }) => {
+const P: FC<IP> = ({ children, ...props }) => {
 	const [
 		{
 			components: { P: pComponentDefaults },

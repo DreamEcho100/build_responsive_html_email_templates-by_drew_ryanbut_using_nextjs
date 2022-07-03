@@ -26,7 +26,7 @@ const Trs: FC<ITrsProps> = ({ children, tr, td } = { tr: {} }) => {
 					// (child.type === 'tr' || child.type === 'style')
 					((typeof child.type === 'function' &&
 						'name' in child.type &&
-						['Tr', 'HTMLComment'].includes(child.type.name)) ||
+						['Tr', 'JSXStyle', 'HTMLComment'].includes(child.type.name)) ||
 						(typeof child.type === 'string' &&
 							['tr', 'style'].includes(child.type))) ? (
 						child

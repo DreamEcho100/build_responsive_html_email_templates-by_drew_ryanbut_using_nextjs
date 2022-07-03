@@ -2,14 +2,20 @@
 
 interface IProps {
 	statement: string;
+	removeExtraSpaces?: boolean;
 }
 
-const HTMLComment = ({ statement }: IProps) => {
+const HTMLComment = ({ statement, removeExtraSpaces }: IProps) => {
 	return (
 		<script
 			className='to-replace-with-its-content-on-build'
 			dangerouslySetInnerHTML={{
-				__html: statement,
+				__html:
+					'<!--' +
+					(removeExtraSpaces
+						? statement.trim().replace(/\s+/, ' ')
+						: statement) +
+					'-->',
 			}}
 		/>
 	);

@@ -1,5 +1,4 @@
 import type { NextPage } from 'next';
-import css from 'styled-jsx/css';
 
 import {
 	A,

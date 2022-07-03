@@ -1,6 +1,7 @@
 import Signature1 from '../1';
 import Signature2 from '../2';
 import Signature3 from '../3';
+import Signature4 from '../4';
 
 const AllSignatures = () => {
 	return (
@@ -14,6 +15,10 @@ const AllSignatures = () => {
 			<br />
 			<br />
 			<Signature3 />
+			<br />
+			<br />
+			<br />
+			<Signature4 />
 		</>
 	);
 };

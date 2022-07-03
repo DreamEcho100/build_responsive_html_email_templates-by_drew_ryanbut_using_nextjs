@@ -1,7 +1,8 @@
+import { FC, TableHTMLAttributes } from 'react';
 import Table from '../Table';
 import Td from '../Td';
 
-interface IProps {
+interface IProps extends TableHTMLAttributes<HTMLTableElement> {
 	width: number | string;
 	backgroundColor: string;
 	height: number | string;
@@ -9,15 +10,16 @@ interface IProps {
 	paddingBottom: number;
 }
 
-const HorizontalLineSeparator = ({
+const HorizontalLineSeparator: FC<IProps> = ({
 	width,
 	backgroundColor,
 	height = 2,
 	paddingTop,
 	paddingBottom,
-}: IProps) => {
+	...props
+}) => {
 	return (
-		<Table>
+		<Table {...props}>
 			<Td style={{ paddingTop }}></Td>
 			<Td
 				style={{

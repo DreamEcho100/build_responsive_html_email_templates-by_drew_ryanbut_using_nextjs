@@ -11,49 +11,6 @@ import { SharedConfigProvider } from '../../../react-html-email/context';
 import { generalIcons, personDetails, socialLinksIconsSrc } from '../data';
 // import { EmailWrapper, Table } from '@reactHTMLEmail/components';
 
-const Header = () => {
-	return (
-		<Td style={{ padding: 4 }}>
-			{' '}
-			<Table tr>
-				<Td width='80%' style={{ textTransform: 'uppercase' }}>
-					<Table trs>
-						<Td
-							style={{
-								fontFamily: 'Verdana, Geneva, sans-serif',
-								fontSize: 23,
-								fontWeight: 700,
-								color: '#515151',
-							}}
-						>
-							{personDetails.name}
-						</Td>
-						<Td
-							style={{
-								fontSize: 15,
-								fontWeight: 700,
-								color: '#1f2576',
-							}}
-						>
-							{personDetails.job}
-						</Td>
-					</Table>
-				</Td>
-				<Td width='20%'>
-					<Img
-						style={{
-							width: 120,
-							height: 40,
-						}}
-						src={personDetails.logo.src}
-						alt={personDetails.logo.alt}
-					/>
-				</Td>
-			</Table>
-		</Td>
-	);
-};
-
 const ImgSection = () => {
 	return (
 		<Td>

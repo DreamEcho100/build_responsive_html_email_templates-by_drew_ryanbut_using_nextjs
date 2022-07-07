@@ -48,6 +48,7 @@ const reactHTMLEmailConfig: IReactHTMLEmailConfig = {
 		Img: {
 			style: {
 				...defaultStyles,
+				border: 0,
 			},
 			border: '0',
 		},

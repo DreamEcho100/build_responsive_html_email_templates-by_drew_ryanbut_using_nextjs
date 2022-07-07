@@ -1,4 +1,4 @@
-import { FC, TdHTMLAttributes } from 'react';
+import { FC, ReactNode, TdHTMLAttributes } from 'react';
 import { useSharedConfig } from '../../context';
 import { combineSimilarProps } from '../../utils';
 
@@ -11,7 +11,7 @@ const Td: FC<IAProps> = ({ children, ...props }) => {
 		},
 	] = useSharedConfig();
 
-	if (!children || typeof children !== 'object')
+	if (!children || typeof children !== 'object' || Array.isArray(children))
 		return (
 			<td {...combineSimilarProps(tdComponentDefaults, props)}>{children}</td>
 		);

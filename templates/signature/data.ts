@@ -266,16 +266,24 @@ export const generalIcons = {
 	},
 };
 
+// image: https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg
+// name: Mona Ahmed
+// job: Arts Teacher
+// phone: +20 1284 9460
+// office: +20 1168 8932
+// email: maznam464@gmail.com
+// address: Ain Shams, Cairo/Egypt
+
 export const personDetails = {
 	img: 'https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg',
-	name: 'aleyna Mar',
-	job: 'Graphic Designer',
-	phone: '+1 1284 9460',
-	office: '+1 7768 8932',
+	name: 'Mona Ahmed',
+	job: 'Arts Teacher',
+	phone: '+20 1284 9460',
+	office: '+20 1168 8932',
 	mobile: '+1 9384 5583',
 	// website: 'www.example.io',
-	email: 'kayla.williams@idesign.com',
-	address: 'Level 7, 11 Example St., WA 5232',
+	email: 'maznam464@gmail.com',
+	address: 'Ain Shams, Cairo/Egypt',
 	logo: {
 		src: 'https://img2.gimm.io/2a891e15-4e29-4bb3-8635-01e27583fb50/img.png',
 		alt: '',

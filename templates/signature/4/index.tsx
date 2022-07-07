@@ -106,7 +106,7 @@ const Details = () => {
 							color: '#858585',
 						}}
 					>
-						{personDetails.phone}
+						<A href={`tel:+${personDetails.phone}`}>{personDetails.phone}</A>
 					</span>
 				</Td>
 				<Td>
@@ -118,7 +118,7 @@ const Details = () => {
 							color: '#858585',
 						}}
 					>
-						{personDetails.email}
+						<A href={`mailto:${personDetails.email}`}>{personDetails.email}</A>
 					</span>
 				</Td>
 				<Td>
@@ -224,8 +224,8 @@ const SignatureComponent = () => {
 			<ImgSection key='td-ImgSection' />
 			<Intro key='td-Intro' />
 			<Details key='td-Details' />
-			<SocialHeader key='td-SocialHeader' />
-			<SocialLinks key='td-SocialLinks' />
+			{/* <SocialHeader key='td-SocialHeader' />
+			<SocialLinks key='td-SocialLinks' /> */}
 		</Table>
 	);
 };

@@ -23,4 +23,4 @@ const AllSignatures = () => {
 	);
 };
 
-export default AllSignatures;
+export default Signature1;

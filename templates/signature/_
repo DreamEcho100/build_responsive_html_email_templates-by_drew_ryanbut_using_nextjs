@@ -1,0 +1,287 @@
+
+export const personDetails = {
+	img: 'https://media-exp2.licdn.com/dms/image/C4E03AQE3mVLIMGAuBQ/profile-displayphoto-shrink_200_200/0/1657051099703?e=2147483647&v=beta&t=gfBumqa_QOCIHffZiZHz4iBJNcaz-dBCqmKdB3B-N88',
+	name: 'Mohamed Shaban',
+	job: 'English teacher',
+	phone: '+201120841980',
+	phoneEgypt: '+201120841980',
+	phoneSaudiArabia: '+966541488439',
+	phone1: '+201120841980',
+	phone2: '+201167038369',
+	WhatsappNumber1: '+966541488439',
+	WhatsappNumber2: '+966561363423',
+	skills: 'SAT (Reading - Writing) - EST - ACT - IELTS Courses',
+	office: '+20 1168 8932',
+	mobile: '+1 9384 5583',
+	// website: 'www.example.io',
+	email: 'mr_mo_bek72@yahoo.co.uk',
+	address: 'Ain Shams, Cairo/Egypt',
+	logo: {
+		src: 'https://img2.gimm.io/2a891e15-4e29-4bb3-8635-01e27583fb50/img.png',
+		alt: '',
+	},
+	socialLinks: {
+		facebook: (socialIconsType: any) => ({
+			a: { href: 'https://www.facebook.com/mohamed.bek.9887' },
+			img: { src: socialIconsType.facebook, alt: 'facebook' },
+		}),
+		// twitter: (socialIconsType: any) => ({
+		// 	a: { href: '#' },
+		// 	img: { src: socialIconsType.twitter, alt: 'twitter' },
+		// }),
+		linkedin: (socialIconsType: any) => ({
+			a: {
+				href: 'https://www.linkedin.com/in/mohamed-shaban-627a44200?jobid=1234&lipi=urn%3Ali%3Apage%3Ad_jobs_easyapply_pdfgenresume%3B2tP0oeE6TDy6tD1HfN2O1Q%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_jobs_easyapply_pdfgenresume-v02_profile',
+			},
+			img: { src: socialIconsType.linkedin, alt: 'linkedin' },
+		}),
+		// instagram: (socialIconsType: any) => ({
+		// 	a: { href: '#' },
+		// 	img: { src: socialIconsType.instagram, alt: 'instagram' },
+		// }),
+		// googlePlus: (socialIconsType: any) => ({
+		// 	a: { href: '#' },
+		// 	img: { src: socialIconsType.googlePlus, alt: 'google-plus' },
+		// }),
+		// website: (socialIconsType: any) => ({
+		// 	a: { href: 'www.example.io' },
+		// 	img: { src: socialIconsType.website, alt: 'website' },
+		// }),
+	},
+};
+
+
+import type { NextPage } from 'next';
+
+import {
+	A,
+	Img,
+	P,
+	Table,
+	Td,
+	VerticalBatSeparator,
+} from '../../../react-html-email/components';
+import { SharedConfigProvider } from '../../../react-html-email/context';
+import { personDetails, socialLinksIconsSrc } from '../data';
+// import { EmailWrapper, Table } from '@reactHTMLEmail/components';
+
+interface IProps {}
+
+const ImgSection = () => {
+	return (
+		<Td width={120} className='ImgSection'>
+			<Table>
+				<Td style={{ padding: '4px 0' }}>
+					<span style={{ padding: 4 }}></span>
+					<Img
+						height='150'
+						width='150'
+						alt=''
+						src={personDetails.img}
+						style={{
+							borderRadius: '50%',
+						}}
+					/>
+				</Td>
+			</Table>
+		</Td>
+	);
+};
+
+const Details = () => {
+	const socialIconsType =
+		socialLinksIconsSrc.blackIconAndBorderAndWhiteBg.squaredBorder;
+
+	return (
+		<Td
+			className='Details'
+			style={{ fontFamily: 'Calibri, Helvetica, sans-serif', padding: '8px 0' }}
+		>
+			<Table>
+				<Td style={{ textTransform: 'uppercase' }}>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						{personDetails.name}
+					</span>
+				</Td>
+				<Td style={{ textTransform: 'uppercase' }}>
+					<span
+						style={{
+							fontSize: 15,
+							fontWeight: 700,
+						}}
+					>
+						{personDetails.job}
+					</span>
+				</Td>
+				<Td style={{ textTransform: 'uppercase' }}>
+					<span
+						style={{
+							// fontSize: 15,
+							fontWeight: 500,
+						}}
+					>
+						{personDetails.skills}
+					</span>
+				</Td>
+				<Td>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Email.
+					</span>{' '}
+					<A href={`mailto:${personDetails.email}`}>{personDetails.email}</A>{' '}
+				</Td>
+				<Td>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Phone1.
+					</span>{' '}
+					<A href={`tel:${personDetails.phone1}`}>{personDetails.phone1}</A>{' '}
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Phone2.
+					</span>{' '}
+					<A href={`tel:${personDetails.phone2}`}>{personDetails.phone2}</A>{' '}
+				</Td>
+				<Td>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Whatsapp1.
+					</span>{' '}
+					<A href={`tel:${personDetails.WhatsappNumber1}`}>
+						{personDetails.WhatsappNumber1}
+					</A>{' '}
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Whatsapp2.
+					</span>{' '}
+					<A href={`tel:${personDetails.WhatsappNumber2}`}>
+						{personDetails.WhatsappNumber2}
+					</A>{' '}
+				</Td>
+				{/* <Td>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Web.
+					</span>
+					{personDetails.socialLinks.website(socialIconsType).a.href}
+				</Td> */}
+				{/* <Td>
+					<span
+						style={{
+							fontSize: 17,
+							fontWeight: 700,
+							color: '#008bb8',
+						}}
+					>
+						Address.
+					</span>
+					{personDetails.address}
+				</Td> */}
+				<Td
+					style={{
+						paddingTop: 4,
+					}}
+				>
+					<Table tr>
+						{(['facebook', 'linkedin'] as const).map((item, index) => {
+							const { a, img } =
+								personDetails.socialLinks[item](socialIconsType);
+
+							return (
+								<Td
+									key={index}
+									style={{
+										paddingRight: 12,
+										width: 5,
+									}}
+								>
+									<A role='button' href={a.href}>
+										<Img
+											height='24'
+											width='24'
+											alt={img.alt}
+											src={img.src}
+										></Img>
+									</A>
+								</Td>
+							);
+						})}
+					</Table>
+				</Td>
+			</Table>
+		</Td>
+	);
+};
+
+const SignatureComponent = () => {
+	return (
+		<Table
+			style={{
+				backgroundColor: 'white',
+				color: 'black',
+				fontFamily:
+					"'Open Sans', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif",
+				padding: 4,
+				// fontFamily: '"Calibri, Helvetica, sans-serif"',
+			}}
+			tr
+		>
+			<ImgSection key='td-ImgSection' />
+			<VerticalBatSeparator
+				key='td-VerticalBatSeparator'
+				paddingLeft={10}
+				paddingRight={10}
+				backgroundColor='#000'
+				width={2}
+			/>
+			<Details key='td-Details' />
+			<span style={{ padding: 4 }} />
+		</Table>
+	);
+};
+
+const Signature1: NextPage<IProps> = () => {
+	return (
+		<SharedConfigProvider>
+			<SignatureComponent />
+		</SharedConfigProvider>
+	);
+};
+
+export default Signature1;

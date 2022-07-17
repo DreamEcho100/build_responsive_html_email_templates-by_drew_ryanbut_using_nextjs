@@ -19,6 +19,7 @@ const ImgSection = () => {
 		<Td width={120} className='ImgSection'>
 			<Table>
 				<Td>
+					<span style={{ padding: 4 }}></span>
 					<Img
 						height='120'
 						width='120'
@@ -41,7 +42,7 @@ const Details = () => {
 	return (
 		<Td
 			className='Details'
-			style={{ fontFamily: 'Calibri, Helvetica, sans-serif' }}
+			style={{ fontFamily: 'Calibri, Helvetica, sans-serif', padding: '4px 0' }}
 		>
 			<Table>
 				<Td style={{ textTransform: 'uppercase' }}>
@@ -165,12 +166,13 @@ const SignatureComponent = () => {
 			<ImgSection key='td-ImgSection' />
 			<VerticalBatSeparator
 				key='td-VerticalBatSeparator'
-				paddingLeft={20}
-				paddingRight={20}
+				paddingLeft={10}
+				paddingRight={10}
 				backgroundColor='#000'
 				width={2}
 			/>
 			<Details key='td-Details' />
+			<span style={{ padding: 4 }} />
 		</Table>
 	);
 };
